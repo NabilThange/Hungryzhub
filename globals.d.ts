@@ -6,7 +6,7 @@ declare global {
       off: (event: string, callback: (e: any) => void) => void;
       raf: (time: number) => void;
       destroy: () => void;
-    }
+    } | undefined;
   }
 }
 

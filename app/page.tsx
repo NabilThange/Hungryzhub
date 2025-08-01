@@ -17,9 +17,8 @@ const HungryzHubModern = () => {
       setScrollY(e.scroll)
     }
 
-    // Wait for Lenis to initialize
     const initLenis = () => {
-      if (window.lenis) {
+      if (typeof window !== 'undefined' && window.lenis) {
         window.lenis.on('scroll', handleLenisScroll)
       } else {
         setTimeout(initLenis, 100)
@@ -29,7 +28,7 @@ const HungryzHubModern = () => {
     initLenis()
 
     return () => {
-      if (window.lenis) {
+      if (typeof window !== 'undefined' && window.lenis) {
         window.lenis.off('scroll', handleLenisScroll)
       }
     }

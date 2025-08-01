@@ -2,9 +2,11 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import LenisProvider from "@/components/LenisProvider"
-import { ThemeProvider } from "@/components/theme-provider"
-import { Toaster } from "@/components/ui/sonner"
+import dynamic from 'next/dynamic'
+
+const LenisProvider = dynamic(() => import("@/components/LenisProvider"), { ssr: false })
+const ThemeProvider = dynamic(() => import("@/components/theme-provider").then(mod => mod.ThemeProvider), { ssr: false })
+const Toaster = dynamic(() => import("@/components/ui/sonner").then(mod => mod.Toaster), { ssr: false })
 
 const inter = Inter({ subsets: ["latin"] })
 

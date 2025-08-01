@@ -47,24 +47,28 @@ export default function EnhancedFloatingNavbar() {
 
   useEffect(() => {
     const controlNavbar = () => {
-      const currentScrollY = window.scrollY
-
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setIsVisible(false)
-      } else {
-        setIsVisible(true)
+      if (typeof window !== 'undefined') {
+        const currentScrollY = window.scrollY
+        
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          setIsVisible(false)
+        } else {
+          setIsVisible(true)
+        }
+        
+        setLastScrollY(currentScrollY)
       }
-
-      setLastScrollY(currentScrollY)
     }
 
-    window.addEventListener("scroll", controlNavbar)
-    return () => window.removeEventListener("scroll", controlNavbar)
+    if (typeof window !== 'undefined') {
+      window.addEventListener("scroll", controlNavbar)
+      return () => window.removeEventListener("scroll", controlNavbar)
+    }
   }, [lastScrollY])
 
   // Enhanced burger menu position calculation
   useEffect(() => {
-    if (burgerRef.current) {
+    if (typeof window !== 'undefined' && burgerRef.current) {
       const updatePosition = () => {
         const rect = burgerRef.current.getBoundingClientRect()
         const x = ((rect.left + rect.width / 2) / window.innerWidth) * 100
