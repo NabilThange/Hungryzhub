@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss"
-import { fontFamily } from "tailwindcss/themes/default"
 
 const config = {
   darkMode: ["class"],
@@ -20,9 +19,9 @@ const config = {
     },
     extend: {
       fontFamily: {
-        montaga: ["Montaga", ...fontFamily.serif],
-        "montagu-slab": ["Montagu Slab", ...fontFamily.serif],
-        "share-tech": ["Share Tech", ...fontFamily.sans],
+        montaga: ["Montaga", "serif"],
+        "montagu-slab": ["Montagu Slab", "serif"],
+        "share-tech": ["Share Tech", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -4,7 +4,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
-import { LenisProvider } from "@/components/LenisProvider"
+import LenisProvider from "@/components/LenisProvider"
 
 export const metadata: Metadata = {
   title: "HungryZhub - College Food Review Platform",
