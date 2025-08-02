@@ -110,6 +110,81 @@ html {
   }
 }
 
+/* ======================
+   CUSTOM GOOGLE FONTS
+   ====================== */
+
+/* Montaga - Elegant serif for body text and elegant headlines */
+.font-montaga {
+  font-family: "Montaga", Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Montagu Slab - Modern variable serif for headlines */
+.font-montagu-slab {
+  font-family: "Montagu Slab", Georgia, serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Weight variations for Montagu Slab */
+.font-montagu-slab-thin { font-weight: 100; }
+.font-montagu-slab-light { font-weight: 300; }
+.font-montagu-slab-regular { font-weight: 400; }
+.font-montagu-slab-medium { font-weight: 500; }
+.font-montagu-slab-semibold { font-weight: 600; }
+.font-montagu-slab-bold { font-weight: 700; }
+
+/* Share Tech - Futuristic sans-serif for tech vibes */
+.font-share-tech {
+  font-family: "Share Tech", "Courier New", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Food App Specific Font Combinations */
+.heading-primary {
+  font-family: "Montagu Slab", Georgia, serif;
+  font-weight: 700;
+  font-optical-sizing: auto;
+}
+
+.heading-secondary {
+  font-family: "Montagu Slab", Georgia, serif;
+  font-weight: 500;
+  font-optical-sizing: auto;
+}
+
+.text-elegant {
+  font-family: "Montaga", Georgia, serif;
+  font-weight: 400;
+}
+
+.text-tech {
+  font-family: "Share Tech", "Courier New", monospace;
+  font-weight: 400;
+}
+
+/* Brand specific - for HungryZhub */
+.brand-title {
+  font-family: "Share Tech", "Courier New", monospace;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.review-text {
+  font-family: "Montaga", Georgia, serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.menu-heading {
+  font-family: "Montagu Slab", Georgia, serif;
+  font-weight: 600;
+  font-optical-sizing: auto;
+}
+
 /* Enhanced card animations */
 @keyframes slideInUp {
   from {

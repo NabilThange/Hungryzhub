@@ -190,15 +190,15 @@ export default function VotePage() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white font-['Inter']">
+    <div className="min-h-screen bg-black text-white">
       {/* Floating Navigation */}
       <FloatingNavbar />
 
       {/* SECTION 1: COLLEGE SELECTOR */}
       <section className="pt-24 py-12 px-6 bg-black">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">Vote for Your College</h1>
-          <p className="text-lg text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-montagu-slab font-bold text-center mb-4 text-white">Vote for Your College</h1>
+          <p className="text-lg font-montaga text-gray-400 text-center mb-12 max-w-2xl mx-auto">
             Select your college and vote for the snacks you want to see in HungryzHub vending machines
           </p>
 
@@ -207,7 +207,7 @@ export default function VotePage() {
             <FormStats onStatsUpdate={handleStatsUpdate} />
           </div>
 
-          {/* Rest of the existing content remains the same */}
+          {/* College Selection Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {colleges.map((college, index) => (
               <div
@@ -255,7 +255,7 @@ export default function VotePage() {
                     </div>
                   </div>
 
-                  <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-white transition-colors duration-300">
+                  <h3 className="text-2xl font-montagu-slab font-bold mb-4 text-white group-hover:text-white transition-colors duration-300">
                     {college.name}
                   </h3>
 
@@ -278,7 +278,7 @@ export default function VotePage() {
 
           {/* Startup Message */}
           <div className="text-center mt-8">
-            <p className="text-gray-500 text-lg italic">More colleges coming soon</p>
+            <p className="text-gray-500 text-lg font-montaga italic">More colleges coming soon</p>
           </div>
         </div>
       </section>
@@ -292,24 +292,24 @@ export default function VotePage() {
             </div>
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-2">
-                <h2 className="text-2xl md:text-3xl font-bold text-white">{selectedCollege.name}</h2>
+                <h2 className="text-2xl md:text-3xl font-montagu-slab font-bold text-white">{selectedCollege.name}</h2>
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-white rounded-full"></div>
-                  <span className="text-sm text-gray-400">Machine Active</span>
+                  <span className="text-sm font-montaga text-gray-400">Machine Active</span>
                 </div>
               </div>
               <div className="flex gap-4">
                 <div className="border border-white rounded-lg px-4 py-2">
-                  <div className="text-sm text-gray-400">Total Votes</div>
-                  <div className="text-xl font-bold text-white">{totalVotes}</div>
+                  <div className="text-sm font-montaga text-gray-400">Total Votes</div>
+                  <div className="text-xl font-montagu-slab font-bold text-white">{totalVotes}</div>
                 </div>
                 <div className="border border-white rounded-lg px-4 py-2">
-                  <div className="text-sm text-gray-400">This Week</div>
-                  <div className="text-xl font-bold text-white">+{thisWeekVotes}</div>
+                  <div className="text-sm font-montaga text-gray-400">This Week</div>
+                  <div className="text-xl font-montagu-slab font-bold text-white">+{thisWeekVotes}</div>
                 </div>
                 <div className="border border-white rounded-lg px-4 py-2">
-                  <div className="text-sm text-gray-400">Rank</div>
-                  <div className="text-xl font-bold text-white">#1</div>
+                  <div className="text-sm font-montaga text-gray-400">Rank</div>
+                  <div className="text-xl font-montagu-slab font-bold text-white">#1</div>
                 </div>
               </div>
             </div>
@@ -320,7 +320,7 @@ export default function VotePage() {
       {/* SECTION 3: CURRENT TOP REQUESTS */}
       <section className="py-12 px-6 bg-black">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8 text-white">Current Top Requests</h2>
+          <h2 className="text-3xl font-montagu-slab font-bold text-center mb-8 text-white">Current Top Requests</h2>
           <div className="space-y-8">
             {topRequests.map((item, index) => (
               <div
@@ -345,8 +345,8 @@ export default function VotePage() {
                       </div>
 
                       <div className="space-y-2">
-                        <h3 className="text-2xl font-bold text-white">{item.name}</h3>
-                        <p className="text-zinc-400 bg-zinc-800/40 px-3 py-1 rounded-full text-sm border border-zinc-700/30">
+                        <h3 className="text-2xl font-montagu-slab font-bold text-white">{item.name}</h3>
+                        <p className="text-zinc-400 bg-zinc-800/40 px-3 py-1 rounded-full text-sm font-montaga border border-zinc-700/30">
                           {item.votes} votes
                         </p>
                       </div>
@@ -357,8 +357,8 @@ export default function VotePage() {
                       <div className="relative">
                         <div className="absolute inset-0 bg-white/10 rounded-xl blur-sm" />
                         <div className="relative bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 border border-zinc-600/50 rounded-xl px-6 py-4 backdrop-blur-sm">
-                          <div className="text-3xl font-bold text-white">{item.percentage}%</div>
-                          <div className="text-sm text-zinc-400 font-medium">of total votes</div>
+                          <div className="text-3xl font-montagu-slab font-bold text-white">{item.percentage}%</div>
+                          <div className="text-sm font-montaga text-zinc-400 font-medium">of total votes</div>
                         </div>
                       </div>
                     </div>
@@ -386,7 +386,7 @@ export default function VotePage() {
       {/* SECTION 4: VOTE FOR NEW ITEMS */}
       <section className="py-12 px-6 bg-black">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8 text-white">Vote for New Items</h2>
+          <h2 className="text-3xl font-montagu-slab font-bold text-center mb-8 text-white">Vote for New Items</h2>
 
           {/* Google Form Container */}
           <div className="google-form-container max-w-4xl mx-auto bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 border border-zinc-700/50">
@@ -406,12 +406,12 @@ export default function VotePage() {
 
             {/* Fallback Link */}
             <div className="text-center mt-4">
-              <p className="text-zinc-400 text-sm mb-2">Having trouble with the form?</p>
+              <p className="text-zinc-400 text-sm font-montaga mb-2">Having trouble with the form?</p>
               <a
                 href="https://forms.gle/FtnjEA3aQcDTxxb66"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 bg-white hover:bg-gray-200 text-black font-semibold rounded-lg transition-all duration-200 hover:scale-105"
+                className="inline-flex items-center px-6 py-3 bg-white hover:bg-gray-200 text-black font-montagu-slab font-semibold rounded-lg transition-all duration-200 hover:scale-105"
               >
                 Open Form in New Tab
               </a>
@@ -423,11 +423,11 @@ export default function VotePage() {
       {/* SECTION 5: RECENT VOTES FEED */}
       <section className="py-12 px-6 bg-black">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8 text-white">Recent Votes</h2>
+          <h2 className="text-3xl font-montagu-slab font-bold text-center mb-8 text-white">Recent Votes</h2>
           <div className="space-y-4">
             {/* recentVotes data was removed, so this section will be empty or need new data */}
             {/* For now, keeping the structure but noting the missing data */}
-            <div className="text-center text-gray-500">Recent votes feed is currently empty.</div>
+            <div className="text-center text-gray-500 font-montaga">Recent votes feed is currently empty.</div>
           </div>
         </div>
       </section>

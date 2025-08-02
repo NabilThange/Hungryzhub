@@ -107,11 +107,11 @@ export default function CollegesPage() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden font-inter">
+    <div className="min-h-screen bg-black text-white overflow-x-hidden">
       {/* Floating Navigation */}
       <FloatingNavbar />
 
-      {/* HERO SECTION - Clean Monochromatic with Gradient Blob */}
+      {/* HERO SECTION */}
       <section className="min-h-screen flex items-center justify-center px-6 relative">
         {/* Gradient Blob Background */}
         <div className="absolute inset-0 overflow-hidden">
@@ -125,7 +125,7 @@ export default function CollegesPage() {
           }`}
         >
           {/* Main Headline */}
-          <h1 className="text-7xl md:text-8xl font-bold mb-8 leading-[0.9] text-white tracking-tight">
+          <h1 className="text-7xl md:text-8xl font-montagu-slab font-bold mb-8 leading-[0.9] text-white tracking-tight">
             Transform
             <br />
             Campus Revenue
@@ -133,7 +133,7 @@ export default function CollegesPage() {
 
           {/* Subheadline */}
           <p
-            className={`text-xl md:text-2xl text-white/70 mb-12 max-w-2xl mx-auto font-light leading-relaxed transition-all duration-1000 delay-500 ${
+            className={`text-xl md:text-2xl font-montaga text-white/70 mb-12 max-w-2xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${
               isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
             }`}
           >
@@ -148,7 +148,7 @@ export default function CollegesPage() {
           >
             <button
               onClick={() => scrollToSection("contact-form")}
-              className="group bg-white text-black px-12 py-6 text-lg font-semibold rounded-2xl hover:bg-white/90 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-white/20 transform-gpu"
+              className="group bg-white text-black px-12 py-6 text-lg font-montagu-slab font-semibold rounded-2xl hover:bg-white/90 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-white/20 transform-gpu"
             >
               <span className="flex items-center">
                 Start Partnership
@@ -165,10 +165,10 @@ export default function CollegesPage() {
           <div className="text-center">
             <div className="inline-flex items-center px-6 py-3 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm mb-6 hover:bg-white/10 hover:border-white/30 transition-all duration-300">
               <div className="w-2 h-2 bg-white rounded-full mr-3 animate-pulse"></div>
-              <span className="text-sm text-white/90 font-medium">4-Week Process</span>
+              <span className="text-sm font-share-tech text-white/90">4-Week Process</span>
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">From Inquiry to Revenue</h2>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
+            <h2 className="text-5xl md:text-6xl font-montagu-slab font-bold mb-6 text-white">From Inquiry to Revenue</h2>
+            <p className="text-xl font-montaga text-white/70 max-w-2xl mx-auto">
               Our proven methodology that transforms campus partnerships into sustainable revenue streams
             </p>
           </div>
@@ -177,50 +177,50 @@ export default function CollegesPage() {
         <Timeline data={processTimelineData} />
       </section>
 
-      {/* CONTACT FORM - Simplified Monochromatic with Rounded Inputs */}
+      {/* CONTACT FORM */}
       <section id="contact-form" className="py-32 px-6 bg-black relative">
         <div className="max-w-3xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm mb-6 hover:bg-white/10 hover:border-white/30 transition-all duration-300">
               <div className="w-2 h-2 bg-white rounded-full mr-3 animate-pulse"></div>
-              <span className="text-sm text-white/90 font-medium">Free Consultation</span>
+              <span className="text-sm font-share-tech text-white/90">Free Consultation</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Transform Your Campus?</h2>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-montagu-slab font-bold mb-6 text-white">Ready to Transform Your Campus?</h2>
+            <p className="text-xl font-montaga text-white/70 max-w-2xl mx-auto">
               Start your partnership journey with a comprehensive consultation
             </p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-8">
             <div className="group">
-              <label className="block text-white mb-3 font-medium group-hover:text-white/90 transition-colors duration-300">
+              <label className="block text-white mb-3 font-montaga font-medium group-hover:text-white/90 transition-colors duration-300">
                 Institution Name
               </label>
               <Input
                 placeholder="e.g., Indian Institute of Technology Delhi"
                 value={formData.instituteName}
                 onChange={(e) => handleInputChange("instituteName", e.target.value)}
-                className="bg-black border-white text-white h-14 rounded-xl focus:border-white hover:border-white/70 transition-all duration-300 hover:scale-[1.01] focus:scale-[1.01] placeholder:text-white/40"
+                className="bg-black border-white text-white h-14 rounded-xl focus:border-white hover:border-white/70 transition-all duration-300 hover:scale-[1.01] focus:scale-[1.01] placeholder:text-white/40 font-montaga"
                 required
               />
             </div>
 
             <div className="group">
-              <label className="block text-white mb-3 font-medium group-hover:text-white/90 transition-colors duration-300">
+              <label className="block text-white mb-3 font-montaga font-medium group-hover:text-white/90 transition-colors duration-300">
                 Contact Person
               </label>
               <Input
                 placeholder="e.g., Dr. Rajesh Kumar"
                 value={formData.contactPerson}
                 onChange={(e) => handleInputChange("contactPerson", e.target.value)}
-                className="bg-black border-white text-white h-14 rounded-xl focus:border-white hover:border-white/70 transition-all duration-300 hover:scale-[1.01] focus:scale-[1.01] placeholder:text-white/40"
+                className="bg-black border-white text-white h-14 rounded-xl focus:border-white hover:border-white/70 transition-all duration-300 hover:scale-[1.01] focus:scale-[1.01] placeholder:text-white/40 font-montaga"
                 required
               />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="group">
-                <label className="block text-white mb-3 font-medium group-hover:text-white/90 transition-colors duration-300">
+                <label className="block text-white mb-3 font-montaga font-medium group-hover:text-white/90 transition-colors duration-300">
                   Email Address
                 </label>
                 <Input
@@ -228,26 +228,26 @@ export default function CollegesPage() {
                   placeholder="rajesh.kumar@iitd.ac.in"
                   value={formData.email}
                   onChange={(e) => handleInputChange("email", e.target.value)}
-                  className="bg-black border-white text-white h-14 rounded-xl focus:border-white hover:border-white/70 transition-all duration-300 hover:scale-[1.01] focus:scale-[1.01] placeholder:text-white/40"
+                  className="bg-black border-white text-white h-14 rounded-xl focus:border-white hover:border-white/70 transition-all duration-300 hover:scale-[1.01] focus:scale-[1.01] placeholder:text-white/40 font-montaga"
                   required
                 />
               </div>
               <div className="group">
-                <label className="block text-white mb-3 font-medium group-hover:text-white/90 transition-colors duration-300">
+                <label className="block text-white mb-3 font-montaga font-medium group-hover:text-white/90 transition-colors duration-300">
                   Phone Number
                 </label>
                 <Input
                   placeholder="+91 98765 43210"
                   value={formData.phone}
                   onChange={(e) => handleInputChange("phone", e.target.value)}
-                  className="bg-black border-white text-white h-14 rounded-xl focus:border-white hover:border-white/70 transition-all duration-300 hover:scale-[1.01] focus:scale-[1.01] placeholder:text-white/40"
+                  className="bg-black border-white text-white h-14 rounded-xl focus:border-white hover:border-white/70 transition-all duration-300 hover:scale-[1.01] focus:scale-[1.01] placeholder:text-white/40 font-montaga"
                   required
                 />
               </div>
             </div>
 
             <div className="group">
-              <label className="block text-white mb-3 font-medium group-hover:text-white/90 transition-colors duration-300">
+              <label className="block text-white mb-3 font-montaga font-medium group-hover:text-white/90 transition-colors duration-300">
                 Additional Details
               </label>
               <Textarea
@@ -255,14 +255,14 @@ export default function CollegesPage() {
                 placeholder="Tell us about your campus size, student count, current food services, and revenue expectations..."
                 value={formData.message}
                 onChange={(e) => handleInputChange("message", e.target.value)}
-                className="bg-black border-white text-white resize-none rounded-xl focus:border-white hover:border-white/70 transition-all duration-300 hover:scale-[1.01] focus:scale-[1.01] placeholder:text-white/40"
+                className="bg-black border-white text-white resize-none rounded-xl focus:border-white hover:border-white/70 transition-all duration-300 hover:scale-[1.01] focus:scale-[1.01] placeholder:text-white/40 font-montaga"
               />
             </div>
 
             <button
               type="submit"
               disabled={isSubmitting}
-              className="group w-full bg-white text-black py-5 text-lg font-semibold rounded-xl hover:bg-white/90 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-white/20 disabled:opacity-50 disabled:cursor-not-allowed transform-gpu overflow-hidden relative"
+              className="group w-full bg-white text-black py-5 text-lg font-montagu-slab font-semibold rounded-xl hover:bg-white/90 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-white/20 disabled:opacity-50 disabled:cursor-not-allowed transform-gpu overflow-hidden relative"
             >
               <span className="relative z-10 flex items-center justify-center">
                 {isSubmitting ? (
@@ -283,36 +283,36 @@ export default function CollegesPage() {
         </div>
       </section>
 
-      {/* Footer - Minimal */}
+      {/* Footer */}
       <footer className="py-16 px-6 bg-black border-t border-white">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
-            <h3 className="text-2xl font-bold mb-2 text-white">HungryzHub</h3>
-            <p className="text-white/70">Smart Vending. Student-Driven Choices.</p>
+            <h3 className="text-2xl font-montagu-slab font-bold mb-2 text-white">HungryzHub</h3>
+            <p className="font-montaga text-white/70">Smart Vending. Student-Driven Choices.</p>
           </div>
 
           <div className="flex flex-wrap justify-center gap-8 mb-8">
             <Link
               href="/vote"
-              className="text-white/70 hover:text-white transition-all duration-300 hover:scale-110 transform"
+              className="font-montaga text-white/70 hover:text-white transition-all duration-300 hover:scale-110 transform"
             >
               Vote
             </Link>
             <Link
               href="/colleges"
-              className="text-white/70 hover:text-white transition-all duration-300 hover:scale-110 transform"
+              className="font-montaga text-white/70 hover:text-white transition-all duration-300 hover:scale-110 transform"
             >
               For Colleges
             </Link>
             <Link
               href="/contact"
-              className="text-white/70 hover:text-white transition-all duration-300 hover:scale-110 transform"
+              className="font-montaga text-white/70 hover:text-white transition-all duration-300 hover:scale-110 transform"
             >
               Contact
             </Link>
           </div>
 
-          <div className="text-white/50 text-sm">
+          <div className="font-montaga text-white/50 text-sm">
             <p>&copy; 2024 HungryzHub. All rights reserved.</p>
           </div>
         </div>

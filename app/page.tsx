@@ -112,7 +112,7 @@ const HungryzHubModern = () => {
   ]
 
   return (
-    <div className="min-h-screen text-white font-sans overflow-x-hidden">
+    <div className="min-h-screen text-white overflow-x-hidden">
       {/* Floating Navigation */}
       <FloatingNavbar />
       
@@ -190,7 +190,7 @@ const HungryzHubModern = () => {
                     alt="HungryzHub Logo" 
                     width={150} 
                     height={150} 
-                    className="object-contain transition-all duration-1000 ease-out hover:scale-110" 
+                    className="object-contain transition-all duration-1000 ease-out hover:scale-110 active:scale-95" 
                   />
                 </div>
                 <div className="text-center space-y-2">
@@ -230,6 +230,10 @@ const HungryzHubModern = () => {
             />
           </div>
         </div>
+        <div className="text-center">
+          <h1 className="font-share-tech text-5xl font-bold text-white mb-4">HungryzHub</h1>
+          <p className="font-montagu-slab text-xl text-zinc-300">Smart Vending. Student-Driven Choices.</p>
+        </div>
       </section>
 
       {/* Features Section - Refined Cards */}
@@ -237,8 +241,8 @@ const HungryzHubModern = () => {
         <div className="absolute inset-0 bg-zinc-900/80 backdrop-blur-sm"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">Why Students Choose Us</h2>
-            <p className="text-lg text-zinc-300 max-w-2xl mx-auto leading-relaxed">
+            <h2 className="text-4xl md:text-5xl font-montagu-slab font-bold text-white mb-8 leading-tight">Why Students Choose Us</h2>
+            <p className="text-lg font-montaga text-zinc-300 max-w-2xl mx-auto leading-relaxed">
               We solve the real problems students face with campus vending every day.
             </p>
           </div>
@@ -260,10 +264,10 @@ const HungryzHubModern = () => {
 
                     {/* Text Content */}
                     <div className="space-y-4">
-                      <h3 className="text-lg font-bold text-white leading-tight tracking-wide uppercase">
+                      <h3 className="text-lg font-share-tech font-bold text-white leading-tight tracking-wide uppercase">
                         {feature.title}
                       </h3>
-                      <p className="text-base text-zinc-300 leading-relaxed font-normal">{feature.description}</p>
+                      <p className="text-base font-montaga text-zinc-300 leading-relaxed font-normal">{feature.description}</p>
                     </div>
                   </div>
 
@@ -281,8 +285,8 @@ const HungryzHubModern = () => {
         <div className="absolute inset-0 bg-zinc-800/80 backdrop-blur-sm"></div>
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">Live Student Requests</h2>
-            <p className="text-lg text-zinc-300 max-w-2xl mx-auto leading-relaxed">
+            <h2 className="text-4xl md:text-5xl font-montagu-slab font-bold text-white mb-8 leading-tight">Live Student Requests</h2>
+            <p className="text-lg font-montaga text-zinc-300 max-w-2xl mx-auto leading-relaxed">
               See real students voting for real snacks across campuses right now.
             </p>
           </div>
@@ -314,7 +318,7 @@ const HungryzHubModern = () => {
                             </div>
                           )}
                         </div>
-                        <p className="text-base text-zinc-300 leading-tight">
+                        <p className="text-base font-montaga text-zinc-300 leading-tight">
                           voted for{" "}
                           <span className="font-medium text-white bg-white/10 backdrop-blur-sm px-2 py-1 rounded-lg">
                             {request.item}
@@ -354,8 +358,8 @@ const HungryzHubModern = () => {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">Trusted by Leading Colleges</h2>
-              <p className="text-lg text-zinc-300 leading-relaxed">
+              <h2 className="text-4xl md:text-5xl font-montagu-slab font-bold text-white leading-tight">Trusted by Leading Colleges</h2>
+              <p className="text-lg font-montaga text-zinc-300 leading-relaxed">
                 From community colleges to major universities, HungryzHub is transforming campus dining experiences
                 nationwide.
               </p>
@@ -364,7 +368,7 @@ const HungryzHubModern = () => {
               <article className="relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-sm border-l-4 border-white border-r border-t border-b border-white/10">
                 <div className="p-8 space-y-6">
                   {/* Quote */}
-                  <blockquote className="text-base text-white leading-relaxed">
+                  <blockquote className="text-base font-montaga text-white leading-relaxed">
                     "HungryzHub completely transformed our campus experience. Students love having their favorites
                     available 24/7."
                   </blockquote>
@@ -375,8 +379,8 @@ const HungryzHubModern = () => {
                       <span className="text-black font-bold text-base">MD</span>
                     </div>
                     <div className="space-y-1">
-                      <div className="font-bold text-white text-base leading-none">Manjusha Deshmukh</div>
-                      <div className="text-zinc-400 text-sm leading-none">President, SCOE</div>
+                      <div className="font-montagu-slab font-bold text-white text-base leading-none">Manjusha Deshmukh</div>
+                      <div className="font-montaga text-zinc-400 text-sm leading-none">President, SCOE</div>
                     </div>
                   </div>
                 </div>
@@ -403,8 +407,8 @@ const HungryzHubModern = () => {
         <div className="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16 space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">Ready to Transform Your Campus?</h2>
-            <p className="text-lg text-zinc-300 max-w-2xl mx-auto leading-relaxed">
+            <h2 className="text-4xl md:text-5xl font-montagu-slab font-bold text-white leading-tight">Ready to Transform Your Campus?</h2>
+            <p className="text-lg font-montaga text-zinc-300 max-w-2xl mx-auto leading-relaxed">
               Join the future of campus dining with intelligent vending solutions.
             </p>
           </div>
@@ -414,13 +418,13 @@ const HungryzHubModern = () => {
             <article className="group relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 hover:bg-white/8 p-8 text-center space-y-6">
               <GraduationCap className="w-16 h-16 mx-auto text-white" />
               <div className="space-y-6">
-                <h3 className="text-lg font-bold text-white leading-tight">For Students</h3>
-                <p className="text-base text-zinc-300 leading-relaxed min-h-[3rem]">
+                <h3 className="text-lg font-share-tech font-bold text-white leading-tight">For Students</h3>
+                <p className="text-base font-montaga text-zinc-300 leading-relaxed min-h-[3rem]">
                   Vote for your favorite snacks and bring HungryzHub to your college campus.
                 </p>
               </div>
               <Link href="/vote" className="block">
-                <button className="bg-white text-black px-8 py-4 rounded-2xl font-bold hover:bg-zinc-100 transition-all duration-300 flex items-center gap-3 mx-auto group-hover:scale-105">
+                <button className="bg-white text-black px-8 py-4 rounded-2xl font-montagu-slab font-bold hover:bg-zinc-100 transition-all duration-300 flex items-center gap-3 mx-auto group-hover:scale-105">
                   Vote for Your College
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -431,13 +435,13 @@ const HungryzHubModern = () => {
             <article className="group relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 hover:bg-white/8 p-8 text-center space-y-6">
               <Building2 className="w-16 h-16 mx-auto text-white" />
               <div className="space-y-6">
-                <h3 className="text-lg font-bold text-white leading-tight">For Colleges</h3>
-                <p className="text-base text-zinc-300 leading-relaxed min-h-[3rem]">
+                <h3 className="text-lg font-share-tech font-bold text-white leading-tight">For Colleges</h3>
+                <p className="text-base font-montaga text-zinc-300 leading-relaxed min-h-[3rem]">
                   Partner with us to enhance your campus dining experience and student satisfaction.
                 </p>
               </div>
               <Link href="/colleges" className="block">
-                <button className="bg-white text-black px-8 py-4 rounded-2xl font-bold hover:bg-zinc-100 transition-all duration-300 flex items-center gap-3 mx-auto group-hover:scale-105">
+                <button className="bg-white text-black px-8 py-4 rounded-2xl font-montagu-slab font-bold hover:bg-zinc-100 transition-all duration-300 flex items-center gap-3 mx-auto group-hover:scale-105">
                   Partner With Us
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -455,8 +459,8 @@ const HungryzHubModern = () => {
             <div className="w-16 h-16 flex items-center justify-center mx-auto">
               <Image src="/images/logohh.png" alt="HungryzHub Logo" width={64} height={64} className="object-contain" />
             </div>
-            <h3 className="text-2xl font-bold text-white leading-tight">HungryzHub</h3>
-            <p className="text-zinc-400 text-base">Smart Vending. Student-Driven Choices.</p>
+            <h3 className="text-2xl font-montagu-slab font-bold text-white leading-tight">HungryzHub</h3>
+            <p className="font-montaga text-zinc-400 text-base">Smart Vending. Student-Driven Choices.</p>
           </div>
 
           {/* Social Icons */}
@@ -519,7 +523,7 @@ const HungryzHubModern = () => {
             </a>
           </div>
 
-          <div className="text-center text-zinc-500 text-sm">
+          <div className="text-center text-zinc-500 text-sm font-montaga">
             <p>&copy; 2024 HungryzHub. All rights reserved.</p>
           </div>
         </div>
