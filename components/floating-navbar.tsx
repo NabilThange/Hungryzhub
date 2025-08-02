@@ -228,6 +228,21 @@ export default function EnhancedFloatingNavbar() {
               <span className="relative z-10">CONTACT US</span>
             </Button>
           </Link>
+          
+          <Link href="/about">
+            <Button
+              variant="ghost"
+              className="relative text-white/90 hover:text-black rounded-full px-6 py-2 font-medium tracking-wide text-sm overflow-hidden group transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-105 hover:tracking-wider"
+            >
+              {/* Animated background pill */}
+              <div className="absolute inset-0 bg-white rounded-full scale-0 group-hover:scale-100 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] opacity-0 group-hover:opacity-100"></div>
+              
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-110 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] opacity-0 group-hover:opacity-50 blur-sm"></div>
+              
+              <span className="relative z-10">ABOUT</span>
+            </Button>
+          </Link>
         </div>
 
         {/* Enhanced Mobile Navigation with Smooth Morph */}
@@ -283,6 +298,7 @@ export default function EnhancedFloatingNavbar() {
               { label: "Vote", href: "/vote", delay: 0 },
               { label: "For Colleges", href: "/colleges", delay: 1 },
               { label: "Contact Us", href: "/contact", delay: 2 },
+              { label: "About", href: "/about", delay: 3 },
             ].map((item, index) => (
               <div
                 key={item.label}
