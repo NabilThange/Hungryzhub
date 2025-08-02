@@ -2,6 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Font Classes */
+.montaga-regular {
+  font-family: "Montaga", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montagu-slab-headline {
+  font-family: "Montagu Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.montagu-slab-body {
+  font-family: "Montagu Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.share-tech-regular {
+  font-family: "Share Tech", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Global Typography Styles */
+body {
+  @apply montaga-regular;
+}
+
+h1, h2 {
+  @apply montagu-slab-headline;
+}
+
+h3, h4, h5, h6 {
+  @apply montagu-slab-body;
+}
+
+/* Tech/Futuristic sections */
+.tech-section {
+  @apply share-tech-regular;
+}
+
+/* Utility classes for font variations */
+.font-montaga { font-family: "Montaga", serif; }
+.font-montagu-slab { font-family: "Montagu Slab", serif; }
+.font-share-tech { font-family: "Share Tech", sans-serif; }
+
+/* Responsive font sizes */
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Optional: Add some global styling to improve readability */
+p {
+  @apply leading-relaxed tracking-wide;
+}
+
+/* Dark mode considerations */
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #e0e0e0;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
