@@ -175,7 +175,6 @@ const HungryzHubModern = () => {
                   height={150} 
                   className="object-contain" 
                 />
-                <div className="text-white font-bold text-xl">HungryzHub</div>
               </div>
             </div>
           )}
@@ -192,10 +191,6 @@ const HungryzHubModern = () => {
                     height={150} 
                     className="object-contain transition-all duration-1000 ease-out hover:scale-110 active:scale-95" 
                   />
-                </div>
-                <div className="text-center space-y-2">
-                  <div className="text-white font-bold text-xl">HungryzHub</div>
-                  <div className="text-white/40 text-sm font-light">Scroll to begin your journey</div>
                 </div>
               </div>
             </div>

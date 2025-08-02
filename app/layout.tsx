@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   // Favicon and Browser Tab Icons
   icons: {
     icon: [
-      { url: '/logohh.png', type: 'image/png', sizes: '32x32' },
-      { url: '/logohh.png', type: 'image/png', sizes: '16x16' },
+      { url: '/images/logohh.png', type: 'image/png', sizes: '32x32' },
+      { url: '/images/logohh.png', type: 'image/png', sizes: '16x16' },
     ],
-    shortcut: ['/logohh.png'],
+    shortcut: ['/images/logohh.png'],
     apple: [
-      { url: '/logohh.png', sizes: '180x180' }
+      { url: '/images/logohh.png', sizes: '180x180' }
     ],
   },
 
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: "Discover and review campus dining experiences. Share, rate, and explore food options at your college.",
     images: [
       {
-        url: '/HHSC.png',
+        url: '/images/logohh.png',
         width: 1200,
         height: 630,
         alt: "HungryZhub Logo"
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "HungryZhub - College Food Review Platform",
     description: "Discover and review campus dining experiences. Share, rate, and explore food options at your college.",
-    images: ['/HHSC.png']
+    images: ['/images/logohh.png']
   },
 
   // Mobile-specific meta tags
