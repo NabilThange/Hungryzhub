@@ -7,18 +7,18 @@ import { Toaster } from "@/components/ui/toaster"
 import LenisProvider from "@/components/LenisProvider"
 
 export const metadata: Metadata = {
-  title: "HungryZhub - College Food Review Platform",
+  title: "Hungryzhub - College Vending Machine",
   description: "Discover and review campus dining experiences. Share, rate, and explore food options at your college.",
   
   // Favicon and Browser Tab Icons
   icons: {
     icon: [
-      { url: '/HHSC.png', type: 'image/png', sizes: '32x32' },
-      { url: '/HHSC.png', type: 'image/png', sizes: '16x16' },
+      { url: '/logohh.png', type: 'image/png', sizes: '32x32' },
+      { url: '/logohh.png', type: 'image/png', sizes: '16x16' },
     ],
-    shortcut: ['/HHSC.png'],
+    shortcut: ['/logohh.png'],
     apple: [
-      { url: '/HHSC.png', sizes: '180x180' }
+      { url: '/logohh.png', sizes: '180x180' }
     ],
   },
 
