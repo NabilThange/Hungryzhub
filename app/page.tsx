@@ -192,6 +192,9 @@ const HungryzHubModern = () => {
                     className="object-contain transition-all duration-1000 ease-out hover:scale-110 active:scale-95" 
                   />
                 </div>
+                <div className="text-center space-y-2">
+                  <div className="text-white/40 text-sm font-light">Scroll to begin your journey</div>
+                </div>
               </div>
             </div>
           )}
@@ -214,20 +217,8 @@ const HungryzHubModern = () => {
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden z-10">
-        <div className="relative z-20 flex items-center justify-center hidden">
-          <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 flex items-center justify-center transition-all duration-1000 ease-out transform hover:scale-110 active:scale-95">
-            <Image 
-              src="/images/logohh.png" 
-              alt="HungryzHub Logo" 
-              width={192} 
-              height={192} 
-              className="object-contain transition-transform duration-300 ease-in-out" 
-            />
-          </div>
-        </div>
         <div className="text-center">
-          <h1 className="font-share-tech text-5xl font-bold text-white mb-4">HungryzHub</h1>
-          <p className="font-montagu-slab text-xl text-zinc-300">Smart Vending. Student-Driven Choices.</p>
+          {/* Removed HungryzHub text */}
         </div>
       </section>
 

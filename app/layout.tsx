@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: "Discover and review campus dining experiences. Share, rate, and explore food options at your college.",
     images: [
       {
-        url: '/images/logohh.png',
+        url: '/images/HHSC.png',
         width: 1200,
         height: 630,
         alt: "HungryZhub Logo"
@@ -44,7 +44,24 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "HungryZhub - College Food Review Platform",
     description: "Discover and review campus dining experiences. Share, rate, and explore food options at your college.",
-    images: ['/images/logohh.png']
+    images: ['/images/HHSC.png']
+  },
+
+  // WhatsApp Card
+  other: {
+    'og:type': 'website',
+    'og:url': 'https://hungryzhub.com',
+    'og:title': 'HungryZhub - College Food Review Platform',
+    'og:description': 'Discover and review campus dining experiences. Share, rate, and explore food options at your college.',
+    'og:image': '/images/HHSC.png',
+    'og:site_name': 'HungryZhub',
+    
+    // Instagram-specific Open Graph tags
+    'instagram:card': 'summary_large_image',
+    'instagram:site': '@hungryzhub',
+    'instagram:title': 'HungryZhub - College Food Review Platform',
+    'instagram:description': 'Discover and review campus dining experiences. Share, rate, and explore food options at your college.',
+    'instagram:image': '/images/HHSC.png'
   },
 
   // Mobile-specific meta tags
@@ -76,7 +93,7 @@ export default function RootLayout({
       <head>
         {/* Google Fonts Links */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link 
           href="https://fonts.googleapis.com/css2?family=Montaga&family=Montagu+Slab:opsz,wght@16..144,100..700&family=Share+Tech&display=swap" 
           rel="stylesheet" 
