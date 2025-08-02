@@ -10,6 +10,8 @@ const HungryzHubModern = () => {
   const [activeMetric, setActiveMetric] = useState(0)
   const [scrollY, setScrollY] = useState(0)
   const [heroVideoZIndex, setHeroVideoZIndex] = useState(999)
+  const [videoLoaded, setVideoLoaded] = useState(false)
+  const [shouldPlayVideo, setShouldPlayVideo] = useState(false)
   const heroVideoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
@@ -34,18 +36,46 @@ const HungryzHubModern = () => {
     }
   }, [])
 
+  // Optimized video loading with intersection observer
   useEffect(() => {
     const videoElement = heroVideoRef.current
     if (!videoElement) return
+
+    // Intersection Observer for lazy loading
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldPlayVideo(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.1, rootMargin: '50px' }
+    )
+
+    observer.observe(videoElement)
 
     const handleVideoEnd = () => {
       setHeroVideoZIndex(-9999)
     }
 
+    const handleVideoLoad = () => {
+      setVideoLoaded(true)
+    }
+
+    const handleVideoError = (e: Event) => {
+      console.error('Video error:', e)
+      setHeroVideoZIndex(-9999)
+    }
+
     videoElement.addEventListener('ended', handleVideoEnd)
+    videoElement.addEventListener('loadeddata', handleVideoLoad)
+    videoElement.addEventListener('error', handleVideoError)
 
     return () => {
+      observer.disconnect()
       videoElement.removeEventListener('ended', handleVideoEnd)
+      videoElement.removeEventListener('loadeddata', handleVideoLoad)
+      videoElement.removeEventListener('error', handleVideoError)
     }
   }, [])
 
@@ -85,6 +115,7 @@ const HungryzHubModern = () => {
     <div className="min-h-screen text-white font-sans overflow-x-hidden">
       {/* Floating Navigation */}
       <FloatingNavbar />
+      
       {/* BACKGROUND 1 - HERO SECTION */}
       <div
         id="hero-bg"
@@ -93,34 +124,84 @@ const HungryzHubModern = () => {
           height: "100vh",
           width: "100%",
           zIndex: heroVideoZIndex,
-          backgroundColor: 'black', // Explicit background color
-          backgroundImage: 'linear-gradient(to bottom right, #1a1a1a, #000000)', // Subtle gradient
+          backgroundColor: 'black',
+          backgroundImage: 'linear-gradient(to bottom right, #1a1a1a, #000000)',
         }}
       >
-        {/* Video container for hero background */}
-        <video 
-          ref={heroVideoRef}
-          autoPlay 
-          muted 
-          playsInline 
-          preload="auto"
-          onError={(e) => {
-            console.error('Video error:', e)
-            setHeroVideoZIndex(-9999)
+        {/* Optimized Video container */}
+        <div 
+          className="absolute inset-0 w-full h-full"
+          style={{
+            willChange: 'transform',
+            transform: 'translateZ(0)',
+            backfaceVisibility: 'hidden',
+            contain: 'layout style paint',
           }}
-          onLoadedMetadata={(e) => {
-            console.log('Video metadata loaded')
-          }}
-          className="absolute inset-0 w-full h-full object-cover 
-            max-md:object-[center_50%] max-md:-translate-y-[10%] 
-            md:object-center md:translate-y-0"
         >
-          <source src="/mock1.mp4" type="video/mp4" />
-          <source src="/mock1.webm" type="video/webm" />
-          Your browser does not support the video tag.
-        </video>
+          <video 
+            ref={heroVideoRef}
+            autoPlay={shouldPlayVideo}
+            muted 
+            playsInline 
+            preload="none"
+            poster="/images/video-poster.jpg" // Add a poster image
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{
+              willChange: 'transform',
+              transform: 'translateZ(0)',
+              backfaceVisibility: 'hidden',
+              imageRendering: 'optimizeSpeed',
+              objectPosition: window.innerWidth < 768 ? 'center 30%' : 'center 50%',
+              transform: window.innerWidth < 768 ? 'translateY(-10%) translateZ(0)' : 'translateY(-1%) translateZ(0)',
+            }}
+          >
+            {shouldPlayVideo && (
+              <>
+                <source src="/mock1.webm" type="video/webm" />
+                <source src="/mock1.mp4" type="video/mp4" />
+              </>
+            )}
+            Your browser does not support the video tag.
+          </video>
+          
+          {/* Simple Logo placeholder */}
+          {!videoLoaded && shouldPlayVideo && (
+            <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 to-black flex items-center justify-center">
+              <div className="flex flex-col items-center justify-center space-y-4">
+                <Image 
+                  src="/images/logohh.png" 
+                  alt="HungryzHub Logo" 
+                  width={150} 
+                  height={150} 
+                  className="object-contain" 
+                />
+                <div className="text-white font-bold text-xl">HungryzHub</div>
+              </div>
+            </div>
+          )}
+          
+          {/* Show logo before video starts loading */}
+          {!shouldPlayVideo && (
+            <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 to-black flex items-center justify-center">
+              <div className="flex flex-col items-center justify-center space-y-6">
+                <div className="relative">
+                  <Image 
+                    src="/images/logohh.png" 
+                    alt="HungryzHub Logo" 
+                    width={150} 
+                    height={150} 
+                    className="object-contain transition-all duration-1000 ease-out hover:scale-110" 
+                  />
+                </div>
+                <div className="text-center space-y-2">
+                  <div className="text-white font-bold text-xl">HungryzHub</div>
+                  <div className="text-white/40 text-sm font-light">Scroll to begin your journey</div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
-
 
       {/* BACKGROUND 2 - MAIN CONTENT SECTIONS */}
       <div
